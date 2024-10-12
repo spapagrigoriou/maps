@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100%;
+}
+
+div .fa-mug-hot,
+div .fa-martini-glass-citrus,
+div .fa-pizza-slice {
+  width: 25px;
+  height: 25px;
+}
+
+.button-section > button {
+  width: 100px;
+  height: 35px;
+}
