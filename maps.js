@@ -2,7 +2,6 @@ const { Map: GoogleMap } = await google.maps.importLibrary("maps");
 const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
 
 const mapCenterposition = { lat: 37.926654, lng: 23.734320 };
-const buttonArea = document.querySelector('.button-section');
 
 const coffeeIcon = document.createElement("div");
 coffeeIcon.innerHTML = '<i class="fa-solid fa-mug-hot"></i>';
@@ -13,31 +12,37 @@ drinkIcon.innerHTML = '<i class="fa-solid fa-martini-glass-citrus"></i>';
 const foodIcon = document.createElement("div");
 foodIcon.innerHTML = '<i class="fa-solid fa-pizza-slice"></i>';
 
+const aside = document.querySelector("aside");
+
+const markers = [
+  { 
+    "id": "il-toto", 
+    "position": { lat: 37.926654, lng: 23.734320 },
+    "icon": coffeeIcon,
+    "contentString": '<div id="content"><h1 id="coffeeHeading" class="coffeeHeading">Coffee</h1></div>',
+    "label": "coffee"
+  },
+  { 
+    "id": "coffee-berry", 
+    "position": { lat: 37.916654, lng: 23.734320 },
+    "icon": foodIcon,
+    "contentString": '<div id="content"><h1 id="foodHeading" class="foodHeading">Food</h1></div>',
+    "label": "food",
+  },
+  { 
+    "id": "coffee-island", 
+    "position": { lat: 37.936654, lng: 23.734320 },
+    "icon": drinkIcon,
+    "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Drink</h1></div>',
+    "label": "drink",
+  },
+];
+
+let map;
+
 (async function initMap() {
-  const map = createMap();
-  const markers = [
-    { 
-      "id": "coffee", 
-      "position": { lat: 37.926654, lng: 23.734320 },
-      "icon": coffeeIcon,
-      "contentString": '<div id="content"><h1 id="coffeeHeading" class="coffeeHeading">Coffee</h1></div>',
-      "label": "coffee"
-    },
-    { 
-      "id": "food", 
-      "position": { lat: 37.916654, lng: 23.734320 },
-      "icon": foodIcon,
-      "contentString": '<div id="content"><h1 id="foodHeading" class="foodHeading">Food</h1></div>',
-      "label": "food",
-    },
-    { 
-      "id": "drink", 
-      "position": { lat: 37.936654, lng: 23.734320 },
-      "icon": drinkIcon,
-      "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Drink</h1></div>',
-      "label": "drink",
-    },
-  ];
+  map = createMap();
+  
 
   markers.forEach((m) => {
     const pin = createPin(m.icon);
@@ -50,21 +55,6 @@ foodIcon.innerHTML = '<i class="fa-solid fa-pizza-slice"></i>';
         map,
       });
     });
-  });
-
-  function goToMarker(id) {   
-      setTimeout(() => {
-        const marker = markers.find(mark => mark.id === id)
-        
-        if (marker)
-          map.panTo(marker.position);
-
-      }, 500);
-  }
-
-  buttonArea.addEventListener("click", (event) => { 
-    if(event.target && event.target.matches('button'))
-      goToMarker(event.target.id)
   });
 
 })();
@@ -102,4 +92,36 @@ function createMarker(map, markerPosition, pin) {
     content: pin.element,
     gmpClickable: true,
   });
+}
+
+function goToMarker(id) {   
+  setTimeout(() => {
+    const marker = markers.find(mark => mark.id === id)
+    
+    if (marker)
+      map.panTo(marker.position);
+
+  }, 500);
+}
+
+aside.addEventListener("click", (event) => {
+  console.log(event.target)
+
+  if (event.target.matches("li")) {
+    goToMarker(event.target.id)
+    return;
+  }
+  
+  const category = event.target.closest(".category")
+  
+  if (!category)
+    return
+  
+  const categoryList = category.querySelector(".category-list")
+  
+  toggle(categoryList)
+});
+
+function toggle(element) {
+  element.classList.toggle("show");
 }

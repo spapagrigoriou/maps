@@ -19,3 +19,34 @@ div .fa-pizza-slice {
   width: 100px;
   height: 35px;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0 10px;
+}
+
+.page-container {
+  display: flex;
+  height: 100svh;
+}
+
+.side-bar-container {
+  flex-basis: 300px;
+}
+
+.maps-container {
+  flex-grow: 1;
+}
+
+.category-list {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.category-list.show {
+  opacity: 1;
+  height: 300px; 
+}
+
