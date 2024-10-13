@@ -1,7 +1,7 @@
 const { Map: GoogleMap } = await google.maps.importLibrary("maps");
 const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
 
-const mapCenterposition = { lat: 37.926654, lng: 23.734320 };
+const mapCenterposition = { lat: 38.756902303061175, lng: 22.85970286675081 };
 
 const coffeeIcon = document.createElement("div");
 coffeeIcon.innerHTML = '<i class="fa-solid fa-mug-hot"></i>';
@@ -12,6 +12,10 @@ drinkIcon.innerHTML = '<i class="fa-solid fa-martini-glass-citrus"></i>';
 const foodIcon = document.createElement("div");
 foodIcon.innerHTML = '<i class="fa-solid fa-pizza-slice"></i>';
 
+//fix this
+const koodIcon = document.createElement("div");
+koodIcon.innerHTML = '<i class="fa-solid fa-pizza-slice"></i>';
+
 const aside = document.querySelector("aside");
 
 const markers = [
@@ -19,7 +23,7 @@ const markers = [
     "id": "paralos", 
     "position": { lat: 38.75600309475122, lng: 22.860685229025847 }, 
     "icon": coffeeIcon,
-    "contentString": '<div id="content"><h1 id="coffeeHeading" class="coffeeHeading">Coffee</h1></div>',
+    "contentString": '<div id="content"><h1 id="coffeeHeading" class="coffeeHeading">Coffee</h1>asdfasdgasdgasd</div>',
     "label": "coffee"
   },
   { 
@@ -39,7 +43,7 @@ const markers = [
   { 
     "id": "asteriou", 
     "position": { lat: 38.75930110222655,lng: 22.858179489810745 }, 
-    "icon": foodIcon,
+    "icon": koodIcon,
     "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Drink</h1></div>',
     "label": "drink",
   },
@@ -78,8 +82,8 @@ function createPin(icon) {
   return new PinElement({
     glyph: icon,
     glyphColor: "#ffffff",
-    scale: 2,
-    background: "#a149ee",
+    scale: 1.5,
+    background: "#000",
     borderColor: "none",
 
   });
@@ -112,7 +116,6 @@ function goToMarker(id) {
 }
 
 aside.addEventListener("click", (event) => {
-  console.log(event.target)
 
   if (event.target.matches("li")) {
     goToMarker(event.target.id)

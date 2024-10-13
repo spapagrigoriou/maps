@@ -4,6 +4,11 @@ html, body {
   padding: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 #map {
   height: 100%;
 }
@@ -11,8 +16,8 @@ html, body {
 div .fa-mug-hot,
 div .fa-martini-glass-citrus,
 div .fa-pizza-slice {
-  width: 25px;
-  height: 25px;
+  width: 18px;
+  height: 18px;
 }
 
 .button-section > button {
@@ -32,10 +37,18 @@ ul {
 
 .side-bar-container {
   flex-basis: 300px;
+  background: #000;
 }
 
 .maps-container {
   flex-grow: 1;
+}
+
+.category {
+  padding: 10px 0;
+  background: #000;
+  color: #fff;
+  border-bottom: #fff 1px solid;
 }
 
 .category-list {
@@ -47,6 +60,6 @@ ul {
 
 .category-list.show {
   opacity: 1;
-  height: 300px; 
+  height: auto; 
 }
 
