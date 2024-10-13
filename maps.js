@@ -16,23 +16,30 @@ const aside = document.querySelector("aside");
 
 const markers = [
   { 
-    "id": "il-toto", 
-    "position": { lat: 37.926654, lng: 23.734320 },
+    "id": "paralos", 
+    "position": { lat: 38.75600309475122, lng: 22.860685229025847 }, 
     "icon": coffeeIcon,
     "contentString": '<div id="content"><h1 id="coffeeHeading" class="coffeeHeading">Coffee</h1></div>',
     "label": "coffee"
   },
   { 
-    "id": "coffee-berry", 
-    "position": { lat: 37.916654, lng: 23.734320 },
+    "id": "kapogiannhs", 
+    "position": { lat: 38.756902303061175, lng: 22.85970286675081 }, 
     "icon": foodIcon,
     "contentString": '<div id="content"><h1 id="foodHeading" class="foodHeading">Food</h1></div>',
     "label": "food",
   },
   { 
-    "id": "coffee-island", 
-    "position": { lat: 37.936654, lng: 23.734320 },
+    "id": "kalamos", 
+    "position": { lat: 38.77532203008254, lng: 22.897170012683077 }, 
     "icon": drinkIcon,
+    "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Drink</h1></div>',
+    "label": "drink",
+  },
+  { 
+    "id": "asteriou", 
+    "position": { lat: 38.75930110222655,lng: 22.858179489810745 }, 
+    "icon": foodIcon,
     "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Drink</h1></div>',
     "label": "drink",
   },
