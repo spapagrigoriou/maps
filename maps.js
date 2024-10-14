@@ -23,28 +23,28 @@ const markers = [
     "id": "paralos", 
     "position": { lat: 38.75600309475122, lng: 22.860685229025847 }, 
     "icon": coffeeIcon,
-    "contentString": '<div id="content"><h1 id="coffeeHeading" class="coffeeHeading">Coffee</h1>asdfasdgasdgasd</div>',
+    "contentString": '<div id="content"><h1 id="coffeeHeading" class="coffeeHeading">ΠΑΡΑΛΟΣ</h1>Coffee & Cocktail Bar</div>',
     "label": "coffee"
   },
   { 
     "id": "kapogiannhs", 
     "position": { lat: 38.756902303061175, lng: 22.85970286675081 }, 
     "icon": foodIcon,
-    "contentString": '<div id="content"><h1 id="foodHeading" class="foodHeading">Food</h1></div>',
+    "contentString": '<div id="content"><h1 id="foodHeading" class="foodHeading">ΚΑΠΟΓΙΑΝΝΗΣ BAKERY</h1>Kapogiannhs Daily -Bakery</div>',
     "label": "food",
   },
   { 
     "id": "kalamos", 
     "position": { lat: 38.77532203008254, lng: 22.897170012683077 }, 
     "icon": drinkIcon,
-    "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Drink</h1></div>',
+    "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Παραλια</h1></div>',
     "label": "drink",
   },
   { 
     "id": "asteriou", 
     "position": { lat: 38.75930110222655,lng: 22.858179489810745 }, 
     "icon": koodIcon,
-    "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Drink</h1></div>',
+    "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Φουρνος</h1>ΑΓΓΕΛΟΖΥΜΩΤΟ</div>',
     "label": "drink",
   },
 ];
