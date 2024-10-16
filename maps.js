@@ -22,31 +22,51 @@ const markers = [
   { 
     "id": "paralos", 
     "position": { lat: 38.75600309475122, lng: 22.860685229025847 }, 
-    "icon": coffeeIcon,
-    "contentString": '<div id="content"><h1 id="coffeeHeading" class="coffeeHeading">ΠΑΡΑΛΟΣ</h1>Coffee & Cocktail Bar</div>',
+    "icon":coffeeIcon,
+    "contentString": '<div id="content">' +
+                     '<h1 id="coffeeHeading" class="coffeeHeading">ΠΑΡΑΛΟΣ</h1>' +
+                     '<img src="paralos.jpg" alt="Paralo" style="width:100px;height:auto;"/>' +
+                     '<p>Coffee & Cocktail Bar</p>' +
+                     '<a href="https://eagioskonstantinos.gr/paralos/" target="_blank">View Our Menu </a>' +
+                     '</div>',
     "label": "coffee"
   },
   { 
     "id": "kapogiannhs", 
     "position": { lat: 38.756902303061175, lng: 22.85970286675081 }, 
-    "icon": foodIcon,
-    "contentString": '<div id="content"><h1 id="foodHeading" class="foodHeading">ΚΑΠΟΓΙΑΝΝΗΣ BAKERY</h1>Kapogiannhs Daily -Bakery</div>',
-    "label": "food",
+    "icon":foodIcon,
+    "contentString": '<div id="content">' +
+                     '<h1 id="foodHeading" class="foodHeading">ΚΑΠΟΓΙΑΝΝΗΣ BAKERY</h1>' +
+                     '<img src="kapogiannhs.jpg" alt="Kapogiannhs" style="width:100px;height:auto;"/>' +
+                     '<p>Kapogiannhs Daily -Bakery</p>' +
+                     '<a href="https://eagioskonstantinos.gr/kapogiannhs-bakery/kapogiannhs-menu/" target="_blank">View Our Menu</a>' +
+                     '</div>',
+    "label": "food"
   },
   { 
-    "id": "kalamos", 
-    "position": { lat: 38.77532203008254, lng: 22.897170012683077 }, 
+    "id": "kurosiwo", 
+    "position": { lat: 38.75383307210215, lng: 22.865684458416254 },  
     "icon": drinkIcon,
-    "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Παραλια</h1></div>',
-    "label": "drink",
+    "contentString": '<div id="content">' +
+                     '<h1 id="drinkHeading" class="drinkHeading">Kurosiwo</h1>' +
+                     '<img src="kurosiwo.jpg" alt="Kurosiwo" style="width:100px;height:auto;"/>' +
+                     '<p> Kurosiwo-Beach</p>'+
+                     '<a href="https://eagioskonstantinos.gr/kurosiwo/" target="_blank">View Our Menu</a>' +
+                     '</div>',
+    "label": "drink"
   },
   { 
     "id": "asteriou", 
-    "position": { lat: 38.75930110222655,lng: 22.858179489810745 }, 
-    "icon": koodIcon,
-    "contentString": '<div id="content"><h1 id="drinkHeading" class="drinkHeading">Φουρνος</h1>ΑΓΓΕΛΟΖΥΜΩΤΟ</div>',
-    "label": "drink",
-  },
+    "position": { lat: 38.75930110222655, lng: 22.858179489810745 }, 
+    "icon": foodIcon,
+    "contentString": '<div id="content">' +
+                     '<h1 id="drinkHeading" class="drinkHeading">Φουρνος Αστεριου </h1>' +
+                     '<img src="asteriou.jpg" alt="Asteriou Logo" style="width:100px;height:auto;"/>' +
+                     '<p>ΑΓΓΕΛΟΖΥΜΩΤΟ</p>' +
+                     '<a href="https://eagioskonstantinos.gr/asteriou-bakery/" target="_blank">View Our menu</a>' +
+                     '</div>',
+    "label": "drink"
+  }
 ];
 
 let map;
