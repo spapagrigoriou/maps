@@ -34,7 +34,7 @@ const markers = [
   { 
     "id": "kapogiannhs", 
     "position": { lat: 38.756902303061175, lng: 22.85970286675081 }, 
-    "icon":foodIcon,
+    "icon": foodIcon,
     "contentString": '<div id="content">' +
                      '<h1 id="foodHeading" class="foodHeading">ΚΑΠΟΓΙΑΝΝΗΣ BAKERY</h1>' +
                      '<img src="kapogiannhs.jpg" alt="Kapogiannhs" style="width:100px;height:auto;"/>' +
@@ -46,7 +46,7 @@ const markers = [
   { 
     "id": "kurosiwo", 
     "position": { lat: 38.75383307210215, lng: 22.865684458416254 },  
-    "icon": drinkIcon,
+    "icon":foodIcon,
     "contentString": '<div id="content">' +
                      '<h1 id="drinkHeading" class="drinkHeading">Kurosiwo</h1>' +
                      '<img src="kurosiwo.jpg" alt="Kurosiwo" style="width:100px;height:auto;"/>' +
@@ -66,6 +66,18 @@ const markers = [
                      '<a href="https://eagioskonstantinos.gr/asteriou-bakery/" target="_blank">View Our menu</a>' +
                      '</div>',
     "label": "drink"
+  },
+  { 
+    "id": "toparko", 
+    "position": { lat: 38.7585355631267, lng: 22.857875249376775 }, 
+    "icon": foodIcon,
+    "contentString": '<div id="content">' +
+                     '<h1 id="foodHeading" class="foodHeading">ΤΟ ΠΑΡΚΟ</h1>' +
+                     '<img src="to parko.jpg" alt="To parko" style="width:100px;height:auto;"/>' +
+                     '<p>Ταβερνα το Παρκο </p>' +
+                     '<a href="https://eagioskonstantinos.gr/menu-to-parko/" target="_blank">View Our Menu</a>' +
+                     '</div>',
+    "label": "food"
   }
 ];
 
